@@ -76,14 +76,15 @@ const UserListPage = () => {
                 onAddUserClick={handleAddUserClick}
             />
             <div className="container">
-                {isFormVisible && (
-            <UserForm 
-                onSubmit={handleFormSubmit} 
-                currentUser={editingUser}
-                onCancel={handleCancel}
-            />
+                {isFormVisible ? (
+                    <UserForm
+                        onSubmit={handleFormSubmit}
+                        currentUser={editingUser}
+                        onCancel={handleCancel}
+                    />
+                ) : (
+                    <UserTable users={filteredUsers} onEdit={handleEdit} onDelete={handleDelete} />
                 )}
-                <UserTable users={filteredUsers} onEdit={handleEdit} onDelete={handleDelete} />
             </div>
         </div>
     );
