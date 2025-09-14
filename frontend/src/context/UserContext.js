@@ -25,8 +25,6 @@ export const UserProvider = ({ children }) => {
     };
 
     const addUser = (newUser) => {
-        // For a more robust app, you'd re-fetch or add the user with the ID from the response
-        // For simplicity here, we'll just add it to the state.
         setUsers([...users, newUser]);
     }
 
