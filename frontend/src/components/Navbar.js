@@ -14,8 +14,8 @@ const Navbar = ({ searchQuery, onSearchChange, onAddUserClick }) => {
                         <h1 className="ml-3 text-xl font-semibold text-white hidden sm:block">User Dashboard</h1>
                     </div>
 
-                    {/* Search Bar Section */}
-                    <div className="flex-1 flex justify-center px-2 lg:ml-6">
+                    {/* Search Bar and Add User Button Section */}
+                    <div className="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-between">
                          <div className="max-w-lg w-full lg:max-w-xs">
                              <div className="relative">
                                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -31,6 +31,17 @@ const Navbar = ({ searchQuery, onSearchChange, onAddUserClick }) => {
                                      onChange={onSearchChange}
                                  />
                              </div>
+                         </div>
+                         <div className="flex items-center">
+                             <button
+                                 onClick={onAddUserClick}
+                                 className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded flex items-center"
+                             >
+                                 <svg className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                 </svg>
+                                 Add User
+                             </button>
                          </div>
                     </div>
                 </div>
