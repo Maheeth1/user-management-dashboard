@@ -1,7 +1,7 @@
 // backend/database.js
 
 const sqlite3 = require('sqlite3').verbose();
-const DBSOURCE = process.env.DBSOURCE || "users.db";
+const DBSOURCE = "users.db";
 
 // Connect to (and create if it doesn't exist) the SQLite database file
 const db = new sqlite3.Database(DBSOURCE, (err) => {
