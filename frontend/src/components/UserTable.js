@@ -17,19 +17,19 @@ const UserTable = ({ users, onEdit, onDelete }) => {
                     {users.map(user => (
                         <tr key={user.id} className="hover:bg-gray-50">
                             <td className="py-2 px-4 border-b">{user.name}</td>
-                            <td className="py-2 px-4 border-b">{user.email}</td>
-                            <td className="py-2 px-4 border-b">{user.phone}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap">{user.email}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap">{user.phone}</td>
                             <td className="py-2 px-4 border-b">{user.company}</td>
-                            <td className="py-2 px-4 border-b">
+                            <td className="py-2 px-4 border-b whitespace-nowrap">
                                 <button
                                     onClick={() => onEdit(user)}
-                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-2"
+                                    className="bg-blue-500 hover:bg-blue-200 text-white font-bold py-1 px-2 rounded mr-2"
                                 >
                                     Edit
                                 </button>
                                 <button
                                     onClick={() => onDelete(user.id)}
-                                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
+                                    className="bg-red-500 hover:bg-red-200 text-white font-bold py-1 px-2 rounded"
                                 >
                                     Delete
                                 </button>
