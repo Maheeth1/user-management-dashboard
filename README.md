@@ -93,7 +93,6 @@ You must have Node.js and npm installed on your machine.
 
 The backend server provides the following RESTful API endpoints:
 
-```
 | Method | Endpoint          | Description                 |
 | :----- | :---------------- | :-------------------------- |
 | `GET`    | `/api/users`      | Get all users               |
@@ -101,4 +100,3 @@ The backend server provides the following RESTful API endpoints:
 | `POST`   | `/api/users`      | Create a new user           |
 | `PUT`    | `/api/users/:id`  | Update an existing user     |
 | `DELETE` | `/api/users/:id`  | Delete a user               |
-```
